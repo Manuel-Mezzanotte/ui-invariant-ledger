@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme-banner.svg" alt="UI Invariant Ledger - risk-scaled checkpoints for frontend AI edits" width="100%">
+  <img src="assets/readme-banner.png" alt="UI Invariant Ledger - risk-scaled checkpoints for frontend AI edits" width="100%">
 </p>
 
 <h1 align="center">UI Invariant Ledger</h1>
@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/releases/tag/v0.1.3"><img alt="Release v0.1.3" src="https://img.shields.io/badge/release-v0.1.3-111827"></a>
+  <a href="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/releases/tag/v0.1.4"><img alt="Release v0.1.4" src="https://img.shields.io/badge/release-v0.1.4-111827"></a>
   <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-16a34a"></a>
   <img alt="Agent Skill" src="https://img.shields.io/badge/agent%20skill-Codex%20%7C%20Claude%20Code%20%7C%20OpenCode-2563eb">
 </p>
@@ -30,21 +30,21 @@ UI Invariant Ledger is a markdown-first Agent Skill for AI coding agents. It mak
 
 It is built for existing UI code where a small visual edit can accidentally change behavior: forms, modals, tables, menus, loading states, error states, accessibility behavior, responsive guards, and shared design-system primitives.
 
-Current release: `v0.1.3`.
+Current release: `v0.1.4`.
 
 ## Install
 
 Install the pinned public release for Codex:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.3 --agent codex --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.4 --agent codex --scope user
 ```
 
 Other supported agents:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.3 --agent claude-code --scope user
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.3 --agent opencode --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.4 --agent claude-code --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.4 --agent opencode --scope user
 ```
 
 Restart the target agent after installing. More install paths are documented in [docs/install.md](docs/install.md).
@@ -191,7 +191,7 @@ skills/ui-invariant-ledger/SKILL.md
 skills/ui-invariant-ledger/references/risk-gate.md
 skills/ui-invariant-ledger/assets/checkpoint-template.md
 skills/ui-invariant-ledger/assets/ledger-template.md
-assets/readme-banner.svg
+assets/readme-banner.png
 assets/readme-flow.svg
 docs/
 examples/

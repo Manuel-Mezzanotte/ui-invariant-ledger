@@ -28,6 +28,15 @@ Scope:
 - Clearer install, usage, mode, evidence, and limitation sections.
 - Validation coverage for README assets.
 
+## v0.1.4
+
+Status: released publicly.
+
+Scope:
+
+- Replace the generated SVG README banner with a polished PNG banner.
+- Keep the README workflow asset and release metadata aligned with the new patch release.
+
 ## v0.2
 
 Goal: improve usability after real task feedback.

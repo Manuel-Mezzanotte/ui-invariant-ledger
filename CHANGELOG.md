@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.4 - 2026-06-22
+
+- Replace the README banner SVG with a polished PNG banner.
+- Update public install commands to `v0.1.4`.
+- Update validation to require the final PNG README banner.
+
 ## v0.1.3 - 2026-06-22
 
 - Redesign the public README with a branded banner, workflow visual, richer usage guidance, and clearer navigation.
