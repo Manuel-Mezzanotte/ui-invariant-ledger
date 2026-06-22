@@ -2,21 +2,27 @@
 
 ## Risk Gate
 
-- Mode:
+- Mode: CHECKPOINT
 - Why:
 - Behavior can change:
 
 ## Preserve
 
--
+- `<invariant>` - Evidence: `INSPECTED | CHECKED | ASSUMED | STALE`
+- `<invariant>` - Evidence:
+- `<invariant>` - Evidence:
 
 ## Permit
 
--
+- `<allowed change>`
+- `<allowed change>`
+- `<allowed change>`
 
 ## Probe
 
--
+- `<unknown or unverified behavior>` - Why it matters:
+- `<unknown or unverified behavior>` - Why it matters:
+- `<unknown or unverified behavior>` - Why it matters:
 
 ## Evidence
 
@@ -27,5 +33,7 @@
 
 ## Post-diff Risk Recheck
 
-- Mode changed:
+- Initial mode:
+- Actual touched concerns:
+- Final mode:
 - Reason:
