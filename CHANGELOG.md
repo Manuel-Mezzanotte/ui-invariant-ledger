@@ -10,3 +10,4 @@
 - Install and validate the skill locally for Codex development.
 - Test the skill on a realistic modal form refactor and document the comparison.
 - Tighten post-test trigger guidance and output caps to keep ledgers useful.
+- Add verified public examples for MICRO, CHECKPOINT, and LEDGER modes.

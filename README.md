@@ -27,6 +27,12 @@ docs/
 examples/
 ```
 
+## Examples
+
+- [MICRO spacing-only change](examples/level-0-micro-change.md)
+- [CHECKPOINT local layout cleanup](examples/level-1-checkpoint-change.md)
+- [LEDGER modal form cleanup](examples/level-2-ledger-change.md)
+
 ## Non-Guarantee
 
 UI Invariant Ledger does not promise zero regressions. It makes risk, evidence, assumptions, and review focus visible.
