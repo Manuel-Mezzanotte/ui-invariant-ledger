@@ -7,3 +7,5 @@
 - Write the operational v0.1 `SKILL.md` workflow, modes, evidence rules, and output limits.
 - Formalize `risk-gate.md` with mode triggers, post-diff escalation, and anti-gaming rules.
 - Finalize minimal checkpoint and ledger templates for v0.1 usage.
+- Install and validate the skill locally for Codex development.
+- Test the skill on a realistic modal form refactor and document the comparison.

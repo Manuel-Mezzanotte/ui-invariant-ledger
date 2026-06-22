@@ -14,6 +14,15 @@ From the repository root:
 gh skill install . ui-invariant-ledger --from-local --agent codex --scope project
 ```
 
+If `gh` is not available, install manually for Codex:
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R skills/ui-invariant-ledger "${CODEX_HOME:-$HOME/.codex}/skills/ui-invariant-ledger"
+```
+
+Restart Codex after installing so the new skill is picked up.
+
 ## Public Install
 
 After a public release is tagged, install from GitHub:
