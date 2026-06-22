@@ -19,7 +19,7 @@
 
 | Invariant | Evidence | Status |
 |---|---|---|
-| `<observable behavior that must remain true>` | `CHECKED | INSPECTED | ASSUMED | STALE` | `<preserved / unchanged in diff / needs review>` |
+| `<observable behavior that must remain true>` | `CHECKED / INSPECTED / ASSUMED / STALE` | `<preserved / unchanged in diff / needs review>` |
 
 Default limit: 5 rows unless the surface is broader.
 

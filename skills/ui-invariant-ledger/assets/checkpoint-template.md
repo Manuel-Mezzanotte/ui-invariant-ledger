@@ -8,7 +8,7 @@
 
 ## Preserve
 
-- `<invariant>` - Evidence: `INSPECTED | CHECKED | ASSUMED | STALE`
+- `<invariant>` - Evidence: `INSPECTED / CHECKED / ASSUMED / STALE`
 - `<invariant>` - Evidence:
 - `<invariant>` - Evidence:
 

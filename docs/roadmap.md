@@ -4,7 +4,7 @@ UI Invariant Ledger should evolve from real usage, not theory. Each future versi
 
 ## Current Release
 
-Current public release: `v0.1.6`.
+Current public release: `v0.1.7`.
 
 The v0.1 line is installable and public. It includes the minimal Agent Skill, public README, examples, CI validation, issue templates, contribution guide, known limitations, and public install verification.
 

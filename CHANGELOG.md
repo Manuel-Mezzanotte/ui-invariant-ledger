@@ -1,9 +1,13 @@
 # Changelog
 
-## Unreleased
+## v0.1.7 - 2026-06-23
 
+- Fix Markdown rendering in `ledger-template.md` by replacing pipe-separated evidence labels with slash-separated labels.
+- Replace pipe-separated evidence labels in `checkpoint-template.md` for consistency.
+- Add validation that rejects pipe-separated evidence label placeholders in skill templates.
 - Add `docs/validation-log.md` with the latest public release, CI, topic, and dry-run verification.
 - Replace the public GitHub topic `devel` with `developer-tools`.
+- Update public install commands to `v0.1.7`.
 
 ## v0.1.6 - 2026-06-22
 

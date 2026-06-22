@@ -147,12 +147,31 @@ def check_examples() -> None:
             fail(f"example {filename} still contains placeholder text")
 
 
+def check_template_evidence_labels() -> None:
+    bad_sequences = [
+        "CHECKED | INSPECTED | ASSUMED | STALE",
+        "INSPECTED | CHECKED | ASSUMED | STALE",
+    ]
+    for path in [
+        SKILL_DIR / "assets" / "checkpoint-template.md",
+        SKILL_DIR / "assets" / "ledger-template.md",
+    ]:
+        text = path.read_text(encoding="utf-8")
+        for sequence in bad_sequences:
+            if sequence in text:
+                fail(
+                    f"{path.relative_to(ROOT)} uses pipe-separated evidence labels; "
+                    "use slash-separated labels to avoid breaking Markdown tables"
+                )
+
+
 def main() -> None:
     check_expected_files()
     check_skill_frontmatter()
     check_no_public_placeholders()
     check_local_markdown_links()
     check_examples()
+    check_template_evidence_labels()
     print("Skill repository validation passed.")
 
 
