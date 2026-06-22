@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.1.3 - 2026-06-22
+
+- Redesign the public README with a branded banner, workflow visual, richer usage guidance, and clearer navigation.
+- Add local SVG README assets so the GitHub landing page is self-contained.
+- Update public install commands to `v0.1.3`.
+- Extend repository validation to require the README assets.
+
 ## v0.1.2 - 2026-06-22
 
 - Add `CONTRIBUTING.md`.

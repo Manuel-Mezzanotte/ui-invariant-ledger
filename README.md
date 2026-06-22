@@ -1,28 +1,81 @@
-# UI Invariant Ledger
+<p align="center">
+  <img src="assets/readme-banner.svg" alt="UI Invariant Ledger - risk-scaled checkpoints for frontend AI edits" width="100%">
+</p>
 
-[![CI](https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/workflows/ci.yml/badge.svg)](https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/workflows/ci.yml)
+<h1 align="center">UI Invariant Ledger</h1>
 
-A markdown-first, evidence-aware Agent Skill that helps AI coding agents preserve observable frontend behavior during UI edits.
+<p align="center">
+  <strong>Risk-scaled checkpoints for preserving observable frontend behavior during AI edits.</strong>
+</p>
 
-## Status
+<p align="center">
+  <a href="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/releases/tag/v0.1.3"><img alt="Release v0.1.3" src="https://img.shields.io/badge/release-v0.1.3-111827"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-16a34a"></a>
+  <img alt="Agent Skill" src="https://img.shields.io/badge/agent%20skill-Codex%20%7C%20Claude%20Code%20%7C%20OpenCode-2563eb">
+</p>
 
-Current release: `v0.1.2`.
+<p align="center">
+  <a href="#install">Install</a>
+  · <a href="#why">Why</a>
+  · <a href="#how-it-works">How It Works</a>
+  · <a href="#modes">Modes</a>
+  · <a href="#examples">Examples</a>
+  · <a href="#limits">Limits</a>
+</p>
 
-This is a minimal, installable v0.1 Agent Skill. It intentionally avoids persistent ledgers, detector scripts, and zero-regression claims until real usage shows they are needed.
+## What It Is
+
+UI Invariant Ledger is a markdown-first Agent Skill for AI coding agents. It makes the agent pause before and after frontend edits, classify risk, name the behavior that must stay intact, and report exactly what was checked versus merely inspected.
+
+It is built for existing UI code where a small visual edit can accidentally change behavior: forms, modals, tables, menus, loading states, error states, accessibility behavior, responsive guards, and shared design-system primitives.
+
+Current release: `v0.1.3`.
+
+## Install
+
+Install the pinned public release for Codex:
+
+```bash
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.3 --agent codex --scope user
+```
+
+Other supported agents:
+
+```bash
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.3 --agent claude-code --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.3 --agent opencode --scope user
+```
+
+Restart the target agent after installing. More install paths are documented in [docs/install.md](docs/install.md).
+
+## Use
+
+Invoke the skill explicitly when asking an agent to edit an existing frontend surface:
+
+```text
+Use $ui-invariant-ledger while cleaning up this SettingsModal.
+```
+
+Good prompts name the surface and the intended change:
+
+```text
+Use $ui-invariant-ledger while simplifying the invoice table toolbar.
+Keep sorting, filters, empty state, pagination, and row actions intact.
+```
 
 ## Why
 
-AI agents can make frontend changes that look correct on the happy path while silently breaking existing behavior:
+AI agents can make UI changes that look correct on the happy path while silently breaking existing behavior:
 
-- loading, error, empty, pending, disabled, or success states;
-- form validation and submit behavior;
-- modal focus, Escape, and keyboard behavior;
-- inline API errors;
-- sorting, pagination, filters, and row actions;
-- responsive guards and overflow behavior;
-- design-system primitives and accessibility attributes.
+- a modal still opens, but Escape or focus return stops working;
+- a form still submits, but validation or disabled states changed;
+- a table still renders, but sorting, filters, pagination, or row actions drifted;
+- a loading path still exists, but an inline API error no longer appears;
+- a responsive layout looks fine on desktop, but mobile overflow returns;
+- a design-system primitive still compiles, but its public contract changed.
 
-UI Invariant Ledger makes the agent state what must be preserved, what may change, what was checked, what was only inspected, and what remains unverified.
+UI Invariant Ledger does not promise zero regressions. It makes risk, evidence, assumptions, and reviewer focus visible.
 
 ## Core Rule
 
@@ -30,34 +83,89 @@ If behavior can change, the task is never `MICRO`.
 
 Risk is determined by touched concerns, not by diff size. A one-line change can be risky when it touches state, handlers, validation, accessibility, data mapping, or public component contracts.
 
-## Install
+## How It Works
 
-Install the pinned public release:
+<p align="center">
+  <img src="assets/readme-flow.svg" alt="UI Invariant Ledger workflow from touched UI concerns to reviewer focus" width="100%">
+</p>
 
-```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.2 --agent codex --scope user
-```
+The skill asks the agent to:
 
-Other supported agents:
+- read the affected UI surface before editing;
+- classify risk with the Risk Gate;
+- separate what must be preserved from what may change;
+- name specific probes for fragile behavior;
+- re-check risk after the diff;
+- label evidence honestly as `CHECKED`, `INSPECTED`, `ASSUMED`, or `STALE`;
+- leave the reviewer with the few things that matter most.
 
-```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.2 --agent claude-code --scope user
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.2 --agent opencode --scope user
-```
+## Modes
 
-Restart the target agent after installing.
+| Mode | Use For | Agent Output |
+|---|---|---|
+| `MICRO` | Tiny edits that cannot affect observable behavior | Under 80-token micro-check |
+| `CHECKPOINT` | Local UI edits where side effects are plausible | Compact `Preserve / Permit / Probe` |
+| `LEDGER` | Stateful, data-driven, accessible, public-contract, or multi-surface changes | Full ledger with evidence, delta, and reviewer focus |
 
-More install options: [docs/install.md](docs/install.md).
-
-## Use
-
-Invoke explicitly:
+### MICRO Preview
 
 ```text
-Use $ui-invariant-ledger while cleaning up this SettingsModal.
+Micro-check: copy-only label change. No handlers, state, data flow,
+validation, focus, responsive rules, or public component contract touched.
+Risk remains MICRO after diff.
 ```
 
-The skill is intended for existing frontend UI code, especially:
+### CHECKPOINT Preview
+
+```text
+UI Invariant Checkpoint
+
+Mode: CHECKPOINT
+Preserve: existing open/close behavior, disabled state, error copy.
+Permit: spacing, grouping, non-semantic class names.
+Probe: mobile overflow at 375px and keyboard tab order.
+Evidence: INSPECTED component state paths, CHECKED lint.
+```
+
+### LEDGER Preview
+
+```text
+# UI Invariant Ledger
+
+Mode: LEDGER
+Risk drivers: form validation, submit state, modal focus, API error mapping.
+Preserve: field validation, disabled submit, Escape close, focus return.
+Changed: layout grouping and helper copy.
+Evidence: CHECKED submit path and lint, INSPECTED error mapping.
+Reviewer focus: mobile keyboard flow and API error branch remain unverified.
+```
+
+## Evidence
+
+The skill uses precise evidence labels:
+
+| Label | Meaning |
+|---|---|
+| `CHECKED` | Verified with a command, test, browser path, viewport, keyboard path, or concrete runtime check |
+| `INSPECTED` | Read in code or diff, without independent behavior verification |
+| `ASSUMED` | Inferred from surrounding patterns |
+| `STALE` | Previous evidence not reconfirmed in the current task |
+
+The agent should not claim "fully verified", "safe", "no regressions", or "everything works".
+
+## Examples
+
+| Scenario | Mode | Example |
+|---|---|---|
+| Copy or spacing-only edit | `MICRO` | [MICRO spacing-only change](examples/level-0-micro-change.md) |
+| Local layout cleanup | `CHECKPOINT` | [CHECKPOINT local layout cleanup](examples/level-1-checkpoint-change.md) |
+| Mobile navigation refinement | `CHECKPOINT` | [CHECKPOINT mobile navigation responsive change](examples/level-1-navigation-responsive-change.md) |
+| Modal form cleanup | `LEDGER` | [LEDGER modal form cleanup](examples/level-2-ledger-change.md) |
+| Data table state refactor | `LEDGER` | [LEDGER table state change](examples/level-2-table-state-change.md) |
+
+## Best Fit
+
+Use UI Invariant Ledger for:
 
 - forms and validation;
 - modals, dialogs, drawers, popovers, and menus;
@@ -69,32 +177,12 @@ The skill is intended for existing frontend UI code, especially:
 - responsive layout and overflow-sensitive surfaces;
 - shared design-system primitives.
 
-## Modes
+Do not use it as:
 
-| Mode | Use For | Output |
-|---|---|---|
-| `MICRO` | Tiny changes that cannot affect observable behavior | Under 80-token micro-check |
-| `CHECKPOINT` | Local UI edits where side effects are plausible | Compact `Preserve / Permit / Probe` |
-| `LEDGER` | Stateful, data-driven, accessible, public-contract, or multi-surface changes | Ledger with evidence, delta, and reviewer focus |
-
-## Evidence
-
-The skill uses precise evidence labels:
-
-- `CHECKED`: verified with a real command, test, browser path, viewport, keyboard path, or concrete runtime check.
-- `INSPECTED`: read in code or diff, without independent verification.
-- `ASSUMED`: inferred from surrounding patterns.
-- `STALE`: previous evidence not reconfirmed in the current task.
-
-It should not claim "fully verified", "safe", "no regressions", or "everything works".
-
-## Examples
-
-- [MICRO spacing-only change](examples/level-0-micro-change.md)
-- [CHECKPOINT local layout cleanup](examples/level-1-checkpoint-change.md)
-- [CHECKPOINT mobile navigation responsive change](examples/level-1-navigation-responsive-change.md)
-- [LEDGER modal form cleanup](examples/level-2-ledger-change.md)
-- [LEDGER table state change](examples/level-2-table-state-change.md)
+- a replacement for real tests or browser verification;
+- a security scanner;
+- a claim that no regressions exist;
+- a reason to produce long ledgers for trivial copy-only edits.
 
 ## Repository Layout
 
@@ -103,6 +191,8 @@ skills/ui-invariant-ledger/SKILL.md
 skills/ui-invariant-ledger/references/risk-gate.md
 skills/ui-invariant-ledger/assets/checkpoint-template.md
 skills/ui-invariant-ledger/assets/ledger-template.md
+assets/readme-banner.svg
+assets/readme-flow.svg
 docs/
 examples/
 scripts/validate_skill.py
@@ -122,15 +212,20 @@ Run GitHub CLI skill validation:
 gh skill publish --dry-run
 ```
 
-## Roadmap
+CI runs the local validation on every push to `main`.
 
-See [docs/roadmap.md](docs/roadmap.md).
+## Docs
+
+- [Install guide](docs/install.md)
+- [Known limitations](docs/known-limitations.md)
+- [Additional documented tests](docs/additional-tests.md)
+- [Roadmap](docs/roadmap.md)
+- [Contribution guide](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
 
 ## Limits
 
-UI Invariant Ledger does not guarantee zero bugs. It makes risk, evidence, assumptions, and reviewer focus visible.
-
-The v0.1 release does not include:
+The v0.1 line intentionally stays small. It does not include:
 
 - persistent `.ui-invariants/surfaces/*.md` ledgers;
 - detector rules;
@@ -140,9 +235,13 @@ The v0.1 release does not include:
 
 More detail: [docs/known-limitations.md](docs/known-limitations.md).
 
+## Roadmap
+
+See [docs/roadmap.md](docs/roadmap.md). Future versions should be driven by real usage, repeated failure modes, and reviewer feedback rather than speculative automation.
+
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Bug reports, examples, and focused improvements are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

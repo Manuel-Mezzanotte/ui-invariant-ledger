@@ -17,6 +17,17 @@ Scope:
 - Minimal checkpoint and ledger templates.
 - Verified examples for each mode.
 
+## v0.1.3
+
+Status: released publicly.
+
+Scope:
+
+- Polished public README.
+- Local README banner and workflow assets.
+- Clearer install, usage, mode, evidence, and limitation sections.
+- Validation coverage for README assets.
+
 ## v0.2
 
 Goal: improve usability after real task feedback.
