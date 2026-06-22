@@ -12,6 +12,8 @@
 - `<invariant>` - Evidence:
 - `<invariant>` - Evidence:
 
+Default limit: 3 items.
+
 ## Permit
 
 - `<allowed change>`
@@ -23,6 +25,8 @@
 - `<unknown or unverified behavior>` - Why it matters:
 - `<unknown or unverified behavior>` - Why it matters:
 - `<unknown or unverified behavior>` - Why it matters:
+
+Default limit: 3 items.
 
 ## Evidence
 

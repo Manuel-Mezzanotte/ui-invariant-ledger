@@ -75,3 +75,10 @@ With the skill, the same task is correctly escalated to `LEDGER`, forcing the ed
 ## Outcome
 
 Phase 6 passes as a first controlled test. The skill correctly identifies this as `LEDGER`, exposes the important invariants, and produces a useful reviewer focus without requiring a persistent ledger.
+
+## Phase 7 Adjustments
+
+- Clarify that visual cleanup wording does not lower risk when the touched surface contains behavior.
+- Treat modal/form/table/navigation cleanup with pending, error, accessibility, responsive, or public-prop concerns as `LEDGER`.
+- Add default output caps so the ledger stays reviewable instead of exhaustive.
+- Keep `Not checked` explicit, but only for checks related to touched concerns.

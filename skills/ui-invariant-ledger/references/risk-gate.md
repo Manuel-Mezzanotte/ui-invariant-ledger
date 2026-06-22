@@ -19,6 +19,8 @@ Use the lowest mode that honestly covers the touched concerns.
 
 If unsure between two modes, choose the higher-risk mode.
 
+Visual wording does not lower risk. A request to "clean up", "simplify", "polish", or "refactor" a surface still follows the touched concerns below.
+
 ## MICRO Is Forbidden When Touching
 
 - conditional rendering
@@ -47,6 +49,7 @@ Examples:
 - responsive container or overflow changes;
 - design-system class or primitive changes with possible behavior or accessibility side effects;
 - visual changes on interactive elements when handlers stay unchanged.
+- visual cleanup of static markup around a stateful branch when the stateful branch is preserved but not edited.
 
 ## LEDGER Triggers
 
@@ -60,6 +63,7 @@ Examples:
 - data fetching, API mapping, error rendering, optimistic UI, cache invalidation, or permissions;
 - routing, navigation, auth, payments, destructive actions, or user data;
 - public component props, shared primitives, or multiple UI surfaces.
+- visual cleanup of a modal, form, table, or navigation surface when the component contains pending state, error rendering, validation, focus behavior, keyboard behavior, responsive guards, or public props.
 
 ## Post-Diff Recheck
 
@@ -83,3 +87,4 @@ If a `CHECKPOINT` diff touched stateful behavior, data flow, accessibility behav
 - Do not omit unknowns to keep the mode lower.
 - Do not downgrade risk because tests passed if relevant behavior was not covered by those tests.
 - Do not hide skipped browser, keyboard, viewport, or error-path checks.
+- Do not produce a long ledger to appear careful; list only invariants plausibly affected by the request or diff.

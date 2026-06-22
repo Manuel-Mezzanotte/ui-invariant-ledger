@@ -18,7 +18,7 @@ This skill is not a design-taste guide and does not promise zero regressions.
 3. Identify what to `Preserve`, `Permit`, and `Probe`.
 4. Edit the code.
 5. Re-run the Risk Gate against the actual diff.
-6. Report the mode, evidence, unverified areas, and reviewer focus at the detail level required by the mode.
+6. Report the mode, evidence, unverified areas, and reviewer focus at the detail level required by the mode. Keep only invariants plausibly affected by the request or diff.
 
 ## Risk Gate
 
@@ -29,6 +29,8 @@ Risk is determined by touched concerns, not by diff size. A one-line change can 
 Read `references/risk-gate.md` when the task is not obviously `MICRO`, when the diff touches behavior-related code, or when the initial and actual risk may differ.
 
 If unsure between two modes, choose the higher-risk mode.
+
+Treat "clean up", "simplify", "polish", or "refactor" requests as behavior-risking when the affected surface contains forms, modals, tables, navigation, data fetching, pending/error states, accessibility semantics, or responsive guards.
 
 ## Modes
 
@@ -71,7 +73,7 @@ Typical triggers:
 - data fetching, API mapping, error rendering, permissions, routing, destructive actions, payments, or user data;
 - public props used outside the edited file.
 
-Output: a ledger normally under 800 tokens. Use `assets/ledger-template.md` for the shape. Include invariant delta and reviewer focus.
+Output: a ledger normally under 800 tokens. Use `assets/ledger-template.md` for the shape. Include invariant delta and reviewer focus. Default to at most 5 `Preserve` rows, 3 `Probe` rows, and 5 reviewer-focus bullets unless the surface is broader.
 
 ## Preserve / Permit / Probe
 
@@ -150,6 +152,15 @@ Post-diff Risk Recheck:
 ```
 
 For `LEDGER`, use `assets/ledger-template.md`.
+
+## Output Trimming Rules
+
+- List only invariants that are relevant to the edited surface.
+- Prefer concrete behavior over generic categories.
+- Combine similar evidence instead of repeating the same sentence.
+- Omit empty optional sections rather than filling them with noise.
+- Keep reviewer focus to checks a human can actually run.
+- Always include important `Not checked` items, but do not list generic checks unrelated to the touched concerns.
 
 ## Language Rules
 

@@ -21,6 +21,8 @@
 |---|---|---|
 | `<observable behavior that must remain true>` | `CHECKED | INSPECTED | ASSUMED | STALE` | `<preserved / unchanged in diff / needs review>` |
 
+Default limit: 5 rows unless the surface is broader.
+
 ## Permit
 
 | Allowed change | Scope |
@@ -32,6 +34,8 @@
 | Unknown | Why it matters | What was inspected | Blocking |
 |---|---|---|---|
 | `<unverified behavior or assumption>` | `<risk if wrong>` | `<code, diff, test, or none>` | `<yes / no>` |
+
+Default limit: 3 rows. Put unrelated unknowns outside the ledger.
 
 ## Evidence
 
@@ -68,3 +72,5 @@
 ## Reviewer Focus
 
 -
+
+Default limit: 5 bullets. Use concrete checks only.

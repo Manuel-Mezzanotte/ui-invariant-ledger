@@ -9,3 +9,4 @@
 - Finalize minimal checkpoint and ledger templates for v0.1 usage.
 - Install and validate the skill locally for Codex development.
 - Test the skill on a realistic modal form refactor and document the comparison.
+- Tighten post-test trigger guidance and output caps to keep ledgers useful.
