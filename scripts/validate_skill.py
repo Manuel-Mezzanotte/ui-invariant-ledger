@@ -26,6 +26,7 @@ EXPECTED_FILES = [
     ROOT / "docs" / "evaluation.md",
     ROOT / "docs" / "troubleshooting.md",
     ROOT / "docs" / "release-checklist.md",
+    ROOT / "docs" / "validation-log.md",
     ROOT / "docs" / "known-limitations.md",
     ROOT / "docs" / "additional-tests.md",
     ROOT / "examples" / "level-0-micro-change.md",

@@ -221,6 +221,7 @@ CI runs the local validation on every push to `main`.
 - [Evaluation scorecard](docs/evaluation.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Release checklist](docs/release-checklist.md)
+- [Validation log](docs/validation-log.md)
 - [Known limitations](docs/known-limitations.md)
 - [Additional documented tests](docs/additional-tests.md)
 - [Roadmap](docs/roadmap.md)

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add `docs/validation-log.md` with the latest public release, CI, topic, and dry-run verification.
+- Replace the public GitHub topic `devel` with `developer-tools`.
+
 ## v0.1.6 - 2026-06-22
 
 - Add the official v1.0.0 plan with required real-world validation gates.
