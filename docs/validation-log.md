@@ -2,6 +2,140 @@
 
 This log records public release and repository checks that are useful before promoting the project more widely.
 
+## 2026-06-23 - v0.1.7 Template Rendering Fix
+
+Repository: `Manuel-Mezzanotte/ui-invariant-ledger`
+
+Checked by: Codex
+
+### Template Markdown Rendering
+
+Result: passed.
+
+Changed template evidence placeholders:
+
+- `ledger-template.md`: `CHECKED | INSPECTED | ASSUMED | STALE` -> `CHECKED / INSPECTED / ASSUMED / STALE`
+- `checkpoint-template.md`: `INSPECTED | CHECKED | ASSUMED | STALE` -> `INSPECTED / CHECKED / ASSUMED / STALE`
+
+GitHub Markdown API rendered the ledger Preserve snippet as a table and kept the evidence labels inside one cell:
+
+```text
+<td><code class="notranslate">CHECKED / INSPECTED / ASSUMED / STALE</code></td>
+</table>
+```
+
+GitHub Markdown API rendered the checkpoint evidence line as a list item:
+
+```text
+<li><code class="notranslate">&lt;invariant&gt;</code> - Evidence: <code class="notranslate">INSPECTED / CHECKED / ASSUMED / STALE</code></li>
+```
+
+### Latest Release
+
+Result: passed.
+
+Command:
+
+```bash
+gh release list --repo Manuel-Mezzanotte/ui-invariant-ledger --limit 8
+```
+
+Observed result:
+
+```text
+v0.1.7    Latest    v0.1.7    2026-06-22T22:38:22Z
+v0.1.6              v0.1.6    2026-06-22T21:39:29Z
+v0.1.5              v0.1.5    2026-06-22T21:10:02Z
+v0.1.4              v0.1.4    2026-06-22T21:00:59Z
+v0.1.3              v0.1.3    2026-06-22T20:56:11Z
+v0.1.2              v0.1.2    2026-06-22T20:39:34Z
+v0.1.1              v0.1.1    2026-06-22T20:34:30Z
+```
+
+Release URL:
+
+```text
+https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/releases/tag/v0.1.7
+```
+
+### CI
+
+Result: passed.
+
+Release workflow run for `v0.1.7`:
+
+```text
+workflow: ci.yml
+commit: ec5d69a
+title: fix: repair template markdown tables
+status: completed
+conclusion: success
+url: https://github.com/Manuel-Mezzanotte/ui-invariant-ledger/actions/runs/27988797430
+```
+
+### Local Repository Validation
+
+Result: passed.
+
+Command:
+
+```bash
+python3 scripts/validate_skill.py
+```
+
+Output:
+
+```text
+Skill repository validation passed.
+```
+
+### GitHub Skill Publish Dry Run
+
+Result: passed with non-blocking warning.
+
+Command:
+
+```bash
+gh skill publish --dry-run
+```
+
+Output:
+
+```text
+Dry run complete. Use without --dry-run to publish.
+warning    no active tag protection rulesets found. Consider protecting tags to ensure immutable releases (Settings > Rules > Rulesets)
+```
+
+### Public README HTML
+
+Result: passed.
+
+Public GitHub repository HTML showed:
+
+```text
+Release v0.1.7 badge
+Current release: v0.1.7
+Install commands pinned to ui-invariant-ledger@v0.1.7
+Right-column release link: v0.1.7
+```
+
+### Install Tests
+
+Result: passed.
+
+Installed `ui-invariant-ledger@v0.1.7` successfully for:
+
+- Codex;
+- Claude Code;
+- OpenCode.
+
+The local Codex install metadata points to:
+
+```text
+github-ref: refs/tags/v0.1.7
+github-repo: https://github.com/Manuel-Mezzanotte/ui-invariant-ledger
+```
+
 ## 2026-06-23 - v0.1.6 Public Readiness Check
 
 Repository: `Manuel-Mezzanotte/ui-invariant-ledger`
