@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Add post-v0.1 roadmap for feedback-driven v0.2+ planning.
+
 ## v0.1.0 - 2026-06-22
 
 - Freeze v0.1 scope for UI Invariant Ledger.

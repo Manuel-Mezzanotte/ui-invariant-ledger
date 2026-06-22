@@ -39,6 +39,10 @@ examples/
 
 See [docs/install.md](docs/install.md).
 
+## Roadmap
+
+See [docs/roadmap.md](docs/roadmap.md).
+
 ## Non-Guarantee
 
 UI Invariant Ledger does not promise zero regressions. It makes risk, evidence, assumptions, and review focus visible.
