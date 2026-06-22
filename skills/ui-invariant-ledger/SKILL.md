@@ -1,6 +1,7 @@
 ---
 name: ui-invariant-ledger
 description: Use when modifying existing frontend UI code, especially refactors or visual changes to components, forms, modals, tables, navigation, responsive layouts, loading/error/empty states, data mapping, accessibility behavior, or design-system primitives. Adds risk-scaled checkpoints so agents preserve observable UI behavior, distinguish checked evidence from inspected code, and report what remains unverified.
+license: MIT
 ---
 
 # UI Invariant Ledger

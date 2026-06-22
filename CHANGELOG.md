@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add a post-restart Codex installation test report.
+- Expand the public README with install, usage, modes, validation, limits, and CI badge.
+- Add a dependency-free repository validation script and minimal GitHub Actions CI.
+- Add `license: MIT` to the skill frontmatter for Agent Skills publishing metadata.
+
 ## v0.1.0 - 2026-06-22
 
 - Freeze v0.1 scope for UI Invariant Ledger.

@@ -4,7 +4,7 @@ UI Invariant Ledger should evolve from real usage, not theory. Each future versi
 
 ## v0.1.0
 
-Status: released locally.
+Status: released publicly.
 
 Scope:
 
