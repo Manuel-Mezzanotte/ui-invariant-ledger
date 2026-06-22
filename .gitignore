@@ -141,3 +141,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Project planning source
+UI_Invariant_Ledger_Project_Plan.pdf

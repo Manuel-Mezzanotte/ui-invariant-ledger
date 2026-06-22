@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Invariant Ledger"
+  short_description: "Preserve UI behavior during edits"
+  default_prompt: "Use $ui-invariant-ledger when modifying existing frontend UI code."
