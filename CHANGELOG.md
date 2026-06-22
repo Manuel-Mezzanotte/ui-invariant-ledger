@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.6 - 2026-06-22
+
+- Add the official v1.0.0 plan with required real-world validation gates.
+- Add `docs/evaluation.md` with a scorecard for mode selection, invariant quality, evidence honesty, reviewer focus, and output length.
+- Add `docs/troubleshooting.md` for common misuse cases.
+- Add `docs/release-checklist.md`, `SECURITY.md`, and `CODEOWNERS` for public hardening.
+- Clarify that persistent ledgers are not part of the v1.0.0 scope.
+- Update public install commands to `v0.1.6`.
+
 ## v0.1.5 - 2026-06-22
 
 - Replace the README workflow SVG with a polished PNG workflow image.

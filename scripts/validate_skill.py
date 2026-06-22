@@ -20,7 +20,12 @@ EXPECTED_FILES = [
     ROOT / "README.md",
     ROOT / "CHANGELOG.md",
     ROOT / "CONTRIBUTING.md",
+    ROOT / "SECURITY.md",
     ROOT / "docs" / "install.md",
+    ROOT / "docs" / "v1-plan.md",
+    ROOT / "docs" / "evaluation.md",
+    ROOT / "docs" / "troubleshooting.md",
+    ROOT / "docs" / "release-checklist.md",
     ROOT / "docs" / "known-limitations.md",
     ROOT / "docs" / "additional-tests.md",
     ROOT / "examples" / "level-0-micro-change.md",
@@ -30,6 +35,7 @@ EXPECTED_FILES = [
     ROOT / "examples" / "level-2-table-state-change.md",
     ROOT / ".github" / "ISSUE_TEMPLATE" / "bug_report.yml",
     ROOT / ".github" / "ISSUE_TEMPLATE" / "example_request.yml",
+    ROOT / ".github" / "CODEOWNERS",
     ROOT / ".github" / "workflows" / "ci.yml",
 ]
 

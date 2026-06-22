@@ -25,6 +25,14 @@ The v0.1 line intentionally does not create persistent `.ui-invariants/surfaces/
 
 Persistent ledgers can become stale. If they are added later, they must include reconciliation rules for `STALE` evidence before influencing current claims.
 
+## Persistent Ledgers Are Not Part Of v1.0.0
+
+UI Invariant Ledger v1 is task-scoped.
+
+It does not maintain persistent `.ui-invariants/surfaces/*.md` files because stale invariant records can create false confidence.
+
+Persistent ledgers may be explored after v1.0.0 only with mandatory reconciliation and staleness rules.
+
 ## Output Limits
 
 Long ledgers can hide the important review points. The skill should list only invariants plausibly affected by the request or diff.
