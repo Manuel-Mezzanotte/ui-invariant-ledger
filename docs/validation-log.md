@@ -73,7 +73,7 @@ Note: the unauthenticated public `/releases` page can lag briefly because of Git
 
 Result: passed.
 
-Latest workflow run:
+Release workflow run for `v0.1.6`:
 
 ```text
 workflow: ci.yml
