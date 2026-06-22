@@ -28,9 +28,9 @@ Restart Codex after installing so the new skill is picked up.
 After a public release is tagged, install from GitHub:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.0 --agent codex --scope user
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.0 --agent claude-code --scope user
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.0 --agent opencode --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent codex --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent claude-code --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent opencode --scope user
 ```
 
-Prefer a tagged release such as `v0.1.0` for stable public installation.
+Prefer a tagged release such as `v0.1.1` for stable public installation.

@@ -6,7 +6,7 @@ A markdown-first, evidence-aware Agent Skill that helps AI coding agents preserv
 
 ## Status
 
-Current release: `v0.1.0`.
+Current release: `v0.1.1`.
 
 This is a minimal, installable v0.1 Agent Skill. It intentionally avoids persistent ledgers, detector scripts, and zero-regression claims until real usage shows they are needed.
 
@@ -35,14 +35,14 @@ Risk is determined by touched concerns, not by diff size. A one-line change can 
 Install the pinned public release:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.0 --agent codex --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent codex --scope user
 ```
 
 Other supported agents:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.0 --agent claude-code --scope user
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.0 --agent opencode --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent claude-code --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent opencode --scope user
 ```
 
 Restart the target agent after installing.

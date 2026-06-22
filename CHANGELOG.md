@@ -1,11 +1,12 @@
 # Changelog
 
-## Unreleased
+## v0.1.1 - 2026-06-22
 
 - Add a post-restart Codex installation test report.
 - Expand the public README with install, usage, modes, validation, limits, and CI badge.
 - Add a dependency-free repository validation script and minimal GitHub Actions CI.
 - Add `license: MIT` to the skill frontmatter for Agent Skills publishing metadata.
+- Publish and verify the `v0.1.1` GitHub Release.
 
 ## v0.1.0 - 2026-06-22
 
