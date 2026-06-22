@@ -1,0 +1,33 @@
+name: Example request
+description: Propose a real frontend task that should become a verified example.
+title: "[Example]: "
+labels: ["example"]
+body:
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Expected mode
+      options:
+        - MICRO
+        - CHECKPOINT
+        - LEDGER
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: Describe the UI surface and requested change.
+    validations:
+      required: true
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Important invariants
+      description: What behavior must be preserved?
+  - type: textarea
+    id: checks
+    attributes:
+      label: Checks performed
+      description: What was checked, inspected, assumed, or not checked?

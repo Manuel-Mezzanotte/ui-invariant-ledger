@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Agent Skills specification
+    url: https://agentskills.io/specification
+    about: Reference for the Agent Skills package format.

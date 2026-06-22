@@ -17,10 +17,18 @@ EXPECTED_FILES = [
     SKILL_DIR / "agents" / "openai.yaml",
     ROOT / "README.md",
     ROOT / "CHANGELOG.md",
+    ROOT / "CONTRIBUTING.md",
     ROOT / "docs" / "install.md",
+    ROOT / "docs" / "known-limitations.md",
+    ROOT / "docs" / "additional-tests.md",
     ROOT / "examples" / "level-0-micro-change.md",
     ROOT / "examples" / "level-1-checkpoint-change.md",
+    ROOT / "examples" / "level-1-navigation-responsive-change.md",
     ROOT / "examples" / "level-2-ledger-change.md",
+    ROOT / "examples" / "level-2-table-state-change.md",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "bug_report.yml",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "example_request.yml",
+    ROOT / ".github" / "workflows" / "ci.yml",
 ]
 
 
@@ -118,7 +126,9 @@ def check_examples() -> None:
     expected = {
         "level-0-micro-change.md": "Micro-check:",
         "level-1-checkpoint-change.md": "UI Invariant Checkpoint",
+        "level-1-navigation-responsive-change.md": "UI Invariant Checkpoint",
         "level-2-ledger-change.md": "# UI Invariant Ledger",
+        "level-2-table-state-change.md": "# UI Invariant Ledger",
     }
     for filename, needle in expected.items():
         text = (ROOT / "examples" / filename).read_text(encoding="utf-8")

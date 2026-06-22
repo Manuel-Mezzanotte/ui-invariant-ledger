@@ -6,7 +6,7 @@ A markdown-first, evidence-aware Agent Skill that helps AI coding agents preserv
 
 ## Status
 
-Current release: `v0.1.1`.
+Current release: `v0.1.2`.
 
 This is a minimal, installable v0.1 Agent Skill. It intentionally avoids persistent ledgers, detector scripts, and zero-regression claims until real usage shows they are needed.
 
@@ -35,14 +35,14 @@ Risk is determined by touched concerns, not by diff size. A one-line change can 
 Install the pinned public release:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent codex --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.2 --agent codex --scope user
 ```
 
 Other supported agents:
 
 ```bash
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent claude-code --scope user
-gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.1 --agent opencode --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.2 --agent claude-code --scope user
+gh skill install Manuel-Mezzanotte/ui-invariant-ledger ui-invariant-ledger@v0.1.2 --agent opencode --scope user
 ```
 
 Restart the target agent after installing.
@@ -92,7 +92,9 @@ It should not claim "fully verified", "safe", "no regressions", or "everything w
 
 - [MICRO spacing-only change](examples/level-0-micro-change.md)
 - [CHECKPOINT local layout cleanup](examples/level-1-checkpoint-change.md)
+- [CHECKPOINT mobile navigation responsive change](examples/level-1-navigation-responsive-change.md)
 - [LEDGER modal form cleanup](examples/level-2-ledger-change.md)
+- [LEDGER table state change](examples/level-2-table-state-change.md)
 
 ## Repository Layout
 
@@ -135,6 +137,12 @@ The v0.1 release does not include:
 - custom CLI;
 - mandatory scripts inside the skill package;
 - full ledger output for every tiny task.
+
+More detail: [docs/known-limitations.md](docs/known-limitations.md).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

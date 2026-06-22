@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.2 - 2026-06-22
+
+- Add `CONTRIBUTING.md`.
+- Add GitHub issue templates for bugs and verified example requests.
+- Expand known limitations documentation.
+- Add additional documented examples/tests for responsive navigation and table state refactors.
+- Update public install commands to `v0.1.2`.
+
 ## v0.1.1 - 2026-06-22
 
 - Add a post-restart Codex installation test report.
