@@ -16,7 +16,7 @@ EXPECTED_FILES = [
     SKILL_DIR / "assets" / "ledger-template.md",
     SKILL_DIR / "agents" / "openai.yaml",
     ROOT / "assets" / "readme-banner.png",
-    ROOT / "assets" / "readme-flow.svg",
+    ROOT / "assets" / "readme-flow.png",
     ROOT / "README.md",
     ROOT / "CHANGELOG.md",
     ROOT / "CONTRIBUTING.md",

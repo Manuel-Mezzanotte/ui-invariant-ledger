@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.5 - 2026-06-22
+
+- Replace the README workflow SVG with a polished PNG workflow image.
+- Update public install commands to `v0.1.5`.
+- Update validation to require the final PNG workflow image.
+
 ## v0.1.4 - 2026-06-22
 
 - Replace the README banner SVG with a polished PNG banner.

@@ -37,6 +37,15 @@ Scope:
 - Replace the generated SVG README banner with a polished PNG banner.
 - Keep the README workflow asset and release metadata aligned with the new patch release.
 
+## v0.1.5
+
+Status: released publicly.
+
+Scope:
+
+- Replace the generated SVG workflow visual with a polished PNG workflow image.
+- Keep README visual assets consistent in format and quality.
+
 ## v0.2
 
 Goal: improve usability after real task feedback.
