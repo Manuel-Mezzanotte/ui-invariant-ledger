@@ -48,7 +48,7 @@ Examples:
 - markup extraction that should keep conditions and handlers stable;
 - responsive container or overflow changes;
 - design-system class or primitive changes with possible behavior or accessibility side effects;
-- visual changes on interactive elements when handlers stay unchanged.
+- visual changes on interactive elements when handlers stay unchanged;
 - visual cleanup of static markup around a stateful branch when the stateful branch is preserved but not edited.
 
 ## LEDGER Triggers
@@ -62,7 +62,7 @@ Examples:
 - tables, filters, sorting, pagination, row selection, row actions, or empty states;
 - data fetching, API mapping, error rendering, optimistic UI, cache invalidation, or permissions;
 - routing, navigation, auth, payments, destructive actions, or user data;
-- public component props, shared primitives, or multiple UI surfaces.
+- public component props, shared primitives, or multiple UI surfaces;
 - visual cleanup of a modal, form, table, or navigation surface when the component contains pending state, error rendering, validation, focus behavior, keyboard behavior, responsive guards, or public props.
 
 ## Post-Diff Recheck
