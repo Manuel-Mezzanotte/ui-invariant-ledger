@@ -4,7 +4,9 @@ A markdown-first, evidence-aware Agent Skill that helps AI coding agents preserv
 
 ## Status
 
-This repository is in v0.1 planning and skeleton setup.
+Current release: `v0.1.0`.
+
+This is a minimal, installable v0.1 Agent Skill. It intentionally avoids persistent ledgers, detector scripts, and zero-regression claims until real usage shows they are needed.
 
 ## Core Idea
 
@@ -32,6 +34,10 @@ examples/
 - [MICRO spacing-only change](examples/level-0-micro-change.md)
 - [CHECKPOINT local layout cleanup](examples/level-1-checkpoint-change.md)
 - [LEDGER modal form cleanup](examples/level-2-ledger-change.md)
+
+## Install
+
+See [docs/install.md](docs/install.md).
 
 ## Non-Guarantee
 

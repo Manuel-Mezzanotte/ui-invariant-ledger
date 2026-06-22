@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.1.0 - 2026-06-22
 
 - Freeze v0.1 scope for UI Invariant Ledger.
 - Create initial Agent Skill repository skeleton.
